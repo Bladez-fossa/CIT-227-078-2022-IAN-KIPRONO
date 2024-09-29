@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Beta Response Form</title>
+    <link rel="stylesheet" href="beta.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="product.html">Product Description</a></li>
+            <li><a href="enquiry.html">Game Review Form</a></li>
+            <li><a href="beta.html">Beta Review Form</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+    <form action="#" method="POST">
+        <h1>BETA REVIEW FORM</h1>
+        <p>Please do fill this form if you played the open beta of our game. Your response is highly rated &#x1F91D</p>
+        <h4>Customer Information</h4>
+        
+        <div>
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" placeholder="Your First Name">
+            <br><br>
+        
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" placeholder="Your Last Name">
+            <br><br>
+
+            <label for="country">Country:</label>
+            <input type="text" id="country" name="country" placeholder="Your Country">
+            <br><br>
+            
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="Email Address">
+            <br><br>
+        
+            <div class="input-group">
+                <label>Gender:</label>
+                <div class="radio-group">
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+                    <input type="radio" id="other" name="gender" value="other">
+                    <label for="other">Other</label>
+                </div>
+            </div>
+
+            <label for="date">When did you start playing the open-beta?</label>
+            <input type="date" id="date" name="dob" min="2024-08-01" max="2024-09-30">
+            <br><br>
+
+            <label for="dropList">Which platform did you play the open-beta?</label>
+            <select id="dropList" name="platform">
+                <option value="">--Select a platform--</option> 
+                <option value="pc">PC</option>
+                <option value="xbox">Xbox</option>
+                <option value="playstation">PlayStation</option>
+                <option value="nintendo">Nintendo Switch</option>
+            </select>
+            <br><br>
+            
+            <h4>Game Experience Feedback Section</h4>
+            <p>Your feedback will be reviewed and we appreciate you taking this moment to fill the feedback form</p>
+            
+            <label for="feedback">How would you rate your experience while playing Sashi: Past Meets Present's open Beta?</label>
+            <select>
+                <option value="empty"></option>
+                <option value="one">Horrid Experience</option>
+                <option value="two">Bad Experience</option>
+                <option value="three">Neutral Experience</option>
+                <option value="four">Good Experience</option>
+                <option value="five">The Best Experience</option>
+            </select>
+            <br><br>
+            
+            <div class="input-group">
+                <label>How responsive were the controls?</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="veryResponsive" name="controll" value="Very Responsive" onclick="onlyOne(this)">
+                    <label for="veryResponsive">Very Responsive</label>
+                    
+                    <input type="checkbox" id="responsive" name="controll" value="Responsive" onclick="onlyOne(this)">
+                    <label for="responsive">Responsive</label>
+                    
+                    <input type="checkbox" id="delayed" name="controll" value="Delayed" onclick="onlyOne(this)">
+                    <label for="delayed">Delayed</label>
+                    
+                    <input type="checkbox" id="veryDelayed" name="controll" value="Very Delayed" onclick="onlyOne(this)">
+                    <label for="veryDelayed">Very Delayed</label>
+                    
+                    <input type="checkbox" id="notResponsive" name="controll" value="Not responsive at all" onclick="onlyOne(this)">
+                    <label for="notResponsive">Not responsive at all</label>
+                </div>
+            </div>
+
+            <script>
+            function onlyOne(checkbox) {
+                var checkboxes = document.getElementsByName('controll'); // select all elements with the name 'controll' and stores it in the variable checkbox
+                checkboxes.forEach((item) => {
+                    if (item !== checkbox) item.checked = false;
+                });
+            }
+            </script>
+
+            <div class="input-group">
+                <label>Did you receive any bug/glitch?</label>
+                <div class="radio-group">
+                    <input type="radio" id="si" name="bug" value="yes">
+                    <label for="si">Yes</label>
+                
+                    <input type="radio" id="naah" name="bug" value="no">
+                    <label for="naah">No</label>
+                </div>
+            </div>
+        
+            <label for="imagePicker" id="fileLabel" style="display: none;">If you have an image of the bug/glitch, attach it here:</label>
+            <input type="file" id="imagePicker" name="imagePicker" accept="image/*" multiple>
+        
+            <script>
+                
+                const yesRadio = document.getElementById('si');
+                const noRadio = document.getElementById('naah');
+                const imagePicker = document.getElementById('imagePicker');
+                const fileLabel = document.getElementById('fileLabel');
+        
+                
+                function toggleFilePicker() {
+                    if (yesRadio.checked) {
+                        imagePicker.style.display = 'block'; // Show the file input
+                        fileLabel.style.display = 'block'; 
+                    } else {
+                        imagePicker.style.display = 'none'; // Hide the file input
+                        fileLabel.style.display = 'none';
+                    }
+                }
+        
+                // Event listeners for the radio buttons
+                yesRadio.addEventListener('change', toggleFilePicker); //'change' is more appropriate for radio buttons than 'click', it waits for the change of state of the radio buttons, upn detection of change its calls the toggleFilePicker function
+                noRadio.addEventListener('change', toggleFilePicker);
+            </script>
+
+            <h4>Game Difficulty section</h4>
+
+           <!-- Combo box incoming!!!!!!!!! -->
+
+            <label for="gameDifficultyInput">How difficult was the game? (on a scale of 1=easy to 10=Extremely difficult)</label>
+            <input id="gameDifficultyInput" list="gameDifficulty" name="gameDifficulty">
+            <datalist id="gameDifficulty">
+                <option value="">Please select</option>
+                <option value="1">1 (Easy)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Moderate)</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10 (Extremely difficult)</option>
+            </datalist>
+
+            <h4>Game Features Section</h4>
+            <label for="gameFeats">Which features of the game would you like to be improved upon/added?</label>
+                <select id="gameFeats" name="gameFeats" multiple>
+                    <option value="Sidequests">Sidequests</option>
+                    <option value="Character customization">Character customization</option>
+                    <option value="Combact">Combact</option>
+                    <option value="controls">Controls</option>
+                    <option value="Game Modes">Game Modes</option>
+                    <option value="Coop">Coop</option>
+                    <option value="DLCs">Future DLCS</option>
+                    <option value="Menu UI design">Menu UI design</option>
+                    <option value="Trophies">Trophy Collection</option>
+                    
+                </select> <br>
+            <label for="overalls">Rate your overall beta experience </label> <br>
+
+            <div class="star-rating">
+                <input type="radio" id="5-stars" name="rating" value="5">
+                <label for="5-stars" class="star">&#9733;</label>
+    
+                <input type="radio" id="4-stars" name="rating" value="4">
+                <label for="4-stars" class="star">&#9733;</label>
+    
+                <input type="radio" id="3-stars" name="rating" value="3">
+                <label for="3-stars" class="star">&#9733;</label>
+    
+                <input type="radio" id="2-stars" name="rating" value="2">
+                <label for="2-stars" class="star">&#9733;</label>
+    
+                <input type="radio" id="1-star" name="rating" value="1">
+                <label for="1-star" class="star">&#9733;</label>
+            </div>
+            <br><br>
+            <label for="additional">Additional Comments</label><br>
+            <textarea id="expl" name="expl" placeholder="Explain how we can improve the game, if there were any bugs that you experienced and which feature of the game intrigued you the most!" rows="10" cols="60"></textarea>
+            
+        </div>
+
+        <!-- Center the submit button -->
+         <div style="text-align: center;">
+        <button type="submit">Submit Feedback</button>
+    </div>
+    </form>
+    <footer>
+        <p>&copy; 2021-2024 Sony Interactive Entertainment LLC. Sashi: Past Meets Present Developed by Yoto Studios</p>
+    </footer>
+</body>
+</html>

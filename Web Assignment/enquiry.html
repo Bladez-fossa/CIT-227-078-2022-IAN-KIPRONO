@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIT-227-078/2022 Ian Kiprono</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #333333;
+            color: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-section {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #444;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .gender {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .gender label {
+            margin-right: 10px;
+        }
+
+        .gender input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        button {
+            display: block;
+            background-color: #bb1111;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            margin: 0 auto;
+        }
+
+        button:hover {
+            background-color: #18519b;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #5e0505;
+            color: aliceblue;
+            position: static;
+            bottom: 0;
+            width: 100%;
+        }
+
+        nav {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: #333;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            display: block;
+            padding: 10px 20px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            background-color: #bb1111;
+        }
+
+        h1, h2, h3 {
+            color: #e6e6e6;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        ul {
+            padding: 0;
+            margin: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+        h2 {
+            margin-top: 30px; /* Creates clear section spacing */
+            color: #e6e6e6;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="product.html">Product Description</a></li>
+            <li><a href="enquiry.html">Game Review Form</a></li>
+            <li><a href="beta.html">Beta Review Form</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+    <h2>Game Review Form</h2>
+    <p>Your feedback is really important to us... You can fill this form if you have played the complete game.</p>
+     
+    <div class="form-section">
+        <form action="#" method="POST">
+            <h2>Customer Information</h2>
+            
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" placeholder="Your First Name">
+        
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" placeholder="Your Last Name">
+
+            <label for="country">Country:</label>
+            <input type="text" id="country" name="country" placeholder="Your Country">
+            
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="Email Address">
+        
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Phone Number e.g., 0782939231">
+
+            <div class="gender">
+                <label>Gender:</label>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+                <input type="radio" id="other" name="gender" value="other">
+                <label for="other">Other</label>
+            </div>
+
+            <h2>Feedback Section</h2>
+            <p>Your feedback will be reviewed, and we appreciate you taking this moment to fill the feedback form.</p>
+
+            <label for="feedback">How would you rate your experience while playing Sashi: Past Meets Present?</label>
+            <select>
+                <option value="empty"></option>
+                <option value="one">Horrid Experience</option>
+                <option value="two">Bad Experience</option>
+                <option value="three">Neutral Experience</option>
+                <option value="four">Good Experience</option>
+                <option value="five">The Best Experience</option>
+            </select>
+
+            <label for="additional">Additional Comments</label>
+            <textarea id="expl" name="expl" placeholder="Explain your experience and/or other thoughts on the game" style="height: 200px;"></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2021-2024 Sony Interactive Entertainment LLC. Sashi: Past Meets Present Developed by Yoto Studios</p>
+    </footer>
+
+</body>
+</html>

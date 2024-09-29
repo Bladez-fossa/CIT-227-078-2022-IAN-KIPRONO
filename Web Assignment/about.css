@@ -1,0 +1,126 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: "Nunito", sans-serif;
+    background-color: #000; 
+    background-image: radial-gradient(#4b0000, #000); 
+    padding: 20px;
+    color: #f5f5f5;
+}
+
+
+
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    display: block;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #bb1111;
+}
+
+
+h2 {
+    margin-top: 20px;
+    
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+h4{
+    background-color: antiquewhite;
+    color: rgb(5, 5, 5);
+    padding: 0.5rem;
+    border-bottom: 2px solid black;
+    font-weight: bolder;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+}
+
+
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    width: 250px;
+    background-color: #222; 
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(255, 0, 0, 0.2); 
+    color: #f5f5f5; 
+    text-align: center; 
+    margin: 20px auto; 
+}
+
+
+.card figure {
+    margin: 0;
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+
+.card figcaption {
+    font-weight: bold;
+    padding: 10px;
+    font-size: 1.2rem;
+    background-color: #4b0000; 
+    text-align: center; 
+    margin: 0; 
+    display: block; 
+}
+
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #4b0000; 
+    color: #fff;
+    margin-top: 20px;
+}
+
+
+@media screen and (min-width: 768px) {
+    .card figcaption {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .card figcaption {
+        font-size: 2rem;
+    }
+}
